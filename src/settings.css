@@ -45,10 +45,11 @@ input[type=number] {
 }
 
 .triggersColumn {
-  border-left: 1px solid hsla(0, 0%, 100%, 0.2);
+  border-left: 1px solid hsla(0, 0%, 100%, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 18rem;
 }
 
 .triggerButton {

@@ -39,18 +39,20 @@ const Setting = ({
             className={inputType === "text" ? 'settingTextInput' : undefined}
             {...props}
           />
-          <div className="settingNumberInputWrapper">
-            <input
-              className="settingTextInput settingTextInputSmall"
-              type="number"
-              value={value}
-              onChange={onChange}
-              step={step}
-            />
-            <div className="settingNumberUnit">
-              {valueUnit}
+          {inputType === "range" && (
+            <div className="settingNumberInputWrapper">
+              <input
+                className="settingTextInput settingTextInputSmall"
+                type="number"
+                value={value}
+                onChange={onChange}
+                step={step}
+              />
+              <div className="settingNumberUnit">
+                {valueUnit}
+              </div>
             </div>
-          </div>
+          )}
         </>
       )}
       {settingType === "switch" && (
