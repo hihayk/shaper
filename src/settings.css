@@ -49,7 +49,13 @@ input[type=number] {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 18rem;
+  padding-left: 2rem;
+}
+
+@media (min-width: 1280px) {
+  .triggersColumn {
+    width: 18rem;
+  }
 }
 
 .triggerButton {
