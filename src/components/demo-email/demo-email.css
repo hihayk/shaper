@@ -1,0 +1,97 @@
+.emailWrapper, .emailWrapper * {
+  line-height: var(--globalLineHeight);
+}
+
+.emailWrapper {
+  font-size: var(--text-s);
+  color: var(--c-grey-8);
+  font-family: var(--fontFamily);
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.sidebar {
+  border-right: 1px solid var(--c-border);
+  min-width: calc(30 * var(--unit));
+  padding: var(--space-l);
+  /* background-color: var(--c-overlay); */
+}
+
+.detailsPanel {
+  border-left: 1px solid var(--c-border);
+  width: calc(60 * var(--unit));
+  padding: var(--space-xl);
+}
+
+main {
+  padding: var(--space-xl);
+}
+
+.emails {
+  border-top: 1px solid var(--c-border);
+}
+
+.email {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding: var(--space-m) 0;
+  border-bottom: 1px solid var(--c-border);
+  min-width: 0;
+  min-width: 100%;
+}
+
+.listCell + .listCell {
+  padding-left: var(--space-l);
+}
+
+.listCell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.searchSection {
+  margin-bottom: var(--space-xl);
+}
+
+.logo {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  background-color: var(--accent);
+}
+
+.postAvatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background-color: var(--accent);
+}
+
+.post {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  grid-gap: var(--space-l);
+  padding: var(--space-l);
+  border-radius: var(--radius);
+  background-color: var(--c-overlay);
+}
+
+.detailsCard {
+  padding: var(--space-l);
+  border-radius: var(--radius);
+  background-color: var(--c-overlay); 
+}
+
+.menuItem {
+  padding: var(--space-s);
+  border-radius: var(--radius);
+}
+
+.menuItem.active {
+  background-color: var(--c-overlay); 
+}

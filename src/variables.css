@@ -41,6 +41,8 @@
   --light: white;
   --link: var(--blue);
   --focus: hsla(233, 100%, 42%, 100%);
+  --c-border: hsla(var(--greyHue), var(--greySaturation), var(--grey-8-lightness), 0.1);
+  --c-overlay: var(--c-grey-1);
 
   --greyHue: var(--accentHue);
   --greySaturation: 20%;
@@ -48,14 +50,23 @@
   --initialGreyLightness: 93%;
   --greyscaleLightnessIncrement: 11%;
 
-  --c-grey-1: hsl(var(--greyHue), var(--greySaturation), var(--initialGreyLightness));
-  --c-grey-2: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 1));
-  --c-grey-3: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 2));
-  --c-grey-4: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 3));
-  --c-grey-5: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 4));
-  --c-grey-6: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 5));
-  --c-grey-7: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 6));
-  --c-grey-8: hsl(var(--greyHue), var(--greySaturation), calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 7));
+  --grey-1-lightness:  var(--initialGreyLightness);
+  --grey-2-lightness:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 1);
+  --grey-3-lightness:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 2);
+  --grey-4-lightness:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 3);
+  --grey-5-lightness:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 4);
+  --grey-6-lightness:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 5);
+  --grey-7-lightness:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 6);
+  --grey-8-lightness:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 7);
+  
+  --c-grey-1: hsl(var(--greyHue), var(--greySaturation), var(--grey-1-lightness));
+  --c-grey-2: hsl(var(--greyHue), var(--greySaturation), var(--grey-2-lightness));
+  --c-grey-3: hsl(var(--greyHue), var(--greySaturation), var(--grey-3-lightness));
+  --c-grey-4: hsl(var(--greyHue), var(--greySaturation), var(--grey-4-lightness));
+  --c-grey-5: hsl(var(--greyHue), var(--greySaturation), var(--grey-5-lightness));
+  --c-grey-6: hsl(var(--greyHue), var(--greySaturation), var(--grey-6-lightness));
+  --c-grey-7: hsl(var(--greyHue), var(--greySaturation), var(--grey-7-lightness));
+  --c-grey-8: hsl(var(--greyHue), var(--greySaturation), var(--grey-8-lightness));
 
   --lineHeightFixedAmount: 0.35rem;
   --lineHeightRelativeAmount: 1.1em;

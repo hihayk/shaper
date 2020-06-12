@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './variables.css';
+import './utilities.css';
+import './common.css';
 import DemoContent from './components/demo-content';
 import { getRandomObject, setProperty, numberToUnit } from './utilities';
 import Settings from './components/settings'
+import DemoEmail from './components/demo-email/demo-email';
 
 function App() {
   const initialState = getRandomObject()
@@ -94,7 +97,8 @@ function App() {
 
         handleRandomize={handleRandomize}
       />
-      <DemoContent />
+      {/* <DemoContent /> */}
+      <DemoEmail />
     </div>
   );
 }
