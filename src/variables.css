@@ -73,6 +73,7 @@
   --c-overlay: var(--c-grey-1);
   --c-background: var(--light);
   --c-body: var(--dark);
+  --c-bodyDimmed: hsla(var(--greyHue), var(--greySaturation), var(--grey-8-lightness), 0.5);
   --c-fieldBorder: var(--c-grey-2);
 }
 
@@ -82,5 +83,6 @@
   --c-overlay: var(--c-grey-7);
   --c-background: var(--dark);
   --c-body: var(--c-grey-1);
+  --c-bodyDimmed: hsla(var(--greyHue), var(--greySaturation), var(--grey-1-lightness), 0.5);
   --c-fieldBorder: var(--c-grey-6);
 }

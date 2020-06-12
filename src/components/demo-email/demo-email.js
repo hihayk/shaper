@@ -36,7 +36,7 @@ const DemoEmail = () => (
         <div className="postMain">
           <div className="postAuthor">{emails[3].name}</div>
           <div className="postContent mb-m text-m">First Steps in React</div>
-          <div className="postDate text-s">6:51 p. m. · 11 jun. 2020</div>
+          <div className="postDate text-s c-bodyDimmed">6:51 p. m. · 11 jun. 2020</div>
         </div>
       </div>
       <div className="post mb-xl">
@@ -46,7 +46,7 @@ const DemoEmail = () => (
         <div className="postMain">
           <div className="postAuthor">{emails[2].name}</div>
           <div className="postContent mb-m text-l">{emails[2].content}</div>
-          <div className="postDate text-s">6:51 p. m. · 11 jun. 2020</div>
+          <div className="postDate text-s c-bodyDimmed">6:51 p. m. · 11 jun. 2020</div>
         </div>
       </div>
       <div className="emails">

@@ -2,6 +2,10 @@
   max-width: 30em;
 }
 
+.c-bodyDimmed {
+  color: var(--c-bodyDimmed);
+}
+
 .text-xs { font-size: var(--text-xs) }
 .text-s { font-size: var(--text-s) }
 .text-m { font-size: var(--text-m) }
