@@ -3,13 +3,29 @@ import './variables.css';
 import './utilities.css';
 import './common.css';
 import DemoContent from './components/demo-content';
-import { getRandomObject, setProperty, numberToUnit } from './utilities';
+import { getRandomObject, setProperty, numberToUnit, fonts } from './utilities';
 import Settings from './components/settings'
 import DemoEmail from './components/demo-email/demo-email';
 
-function App() {
-  const initialState = getRandomObject()
+const initialState = {
+  fontFamily: fonts[0],
+  textSizeIncrement: 1.2,
+  baseTextSize: 0.9,
+  textFrameRatio: 2,
+  textFrameY: 0.7,
+  spaceIncrement: 1.65,
+  unit: 0.5,
+  accentHue: 338,
+  accentSaturation: 54,
+  accentLightness: 50,
+  greySaturation: 10,
+  radius: 0.3,
+  fieldBorderWidth: 2,
+  buttonRound: false,
+  darkMode: false,
+}
 
+function App() {
   const [fontFamily, setFontFamily] = useState(initialState.fontFamily)
   const [textSizeIncrement, setTextSizeIncrement] = useState(initialState.textSizeIncrement)
   const [baseTextSize, setBaseTextSize] = useState(initialState.baseTextSize)
