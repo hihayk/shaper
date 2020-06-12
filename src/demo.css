@@ -2,19 +2,21 @@
   padding: calc(var(--textFrameY) - var(--fieldBorderWidth)) var(--textFrameY);
   font: inherit;
   color: inherit;
-  border: var(--fieldBorderWidth) solid var(--c-grey-2);
+  border: var(--fieldBorderWidth) solid var(--c-fieldBorder);
   appearance: none;
   border-radius: var(--radius);
   width: 100%;
+  background-color: transparent;
 }
 
 .textarea {
   border-radius: var(--radius);
   width: 100%;
-  border: var(--fieldBorderWidth) solid var(--c-grey-2);
+  border: var(--fieldBorderWidth) solid var(--c-fieldBorder);
   padding: calc(var(--textFrameY) - var(--fieldBorderWidth)) var(--textFrameY);
   font: inherit;
   color: inherit;
+  background-color: transparent;
 }
 
 .button {

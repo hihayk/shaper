@@ -37,6 +37,8 @@ const Settings = ({
   setFieldBorderWidth,
   buttonRound,
   setButtonRound,
+  darkMode,
+  setDarkMode,
 
   handleRandomize,
 }) => {
@@ -206,12 +208,13 @@ const Settings = ({
             label="Round buttons"
             settingType="switch"
             switchIsActive={buttonRound}
-            value={fieldBorderWidth}
             onChange={() => setButtonRound(!buttonRound)}
-            min={1}
-            max={3}
-            step={1}
-            valueUnit="px"
+          />
+          <Setting
+            label="Dark mode"
+            settingType="switch"
+            switchIsActive={darkMode}
+            onChange={() => setDarkMode(!darkMode)}
           />
 
         </div>

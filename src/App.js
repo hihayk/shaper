@@ -24,6 +24,7 @@ function App() {
   const [radius, setRadius] = useState(initialState.radius)
   const [fieldBorderWidth, setFieldBorderWidth] = useState(initialState.fieldBorderWidth)
   const [buttonRound, setButtonRound] = useState(initialState.buttonRound)
+  const [darkMode, setDarkMode] = useState(true)
 
   const handleRandomize = () => {
     setFontFamily(getRandomObject().fontFamily)
@@ -60,8 +61,14 @@ function App() {
     } else {
       document.querySelector('body').classList.remove('roundButtons');
     }
+    
+    if(darkMode) {
+      document.querySelector('body').classList.add('darkMode');
+    } else {
+      document.querySelector('body').classList.remove('darkMode');
+    }
 
-  }, [accentHue, accentLightness, accentSaturation, baseTextSize, buttonRound, fieldBorderWidth, fontFamily, greySaturation, radius, spaceIncrement, textFrameRatio, textFrameY, textSizeIncrement, unit])
+  }, [accentHue, accentLightness, accentSaturation, baseTextSize, buttonRound, darkMode, fieldBorderWidth, fontFamily, greySaturation, radius, spaceIncrement, textFrameRatio, textFrameY, textSizeIncrement, unit])
 
   return (
     <div>
@@ -94,6 +101,8 @@ function App() {
         setFieldBorderWidth={setFieldBorderWidth}
         buttonRound={buttonRound}
         setButtonRound={setButtonRound}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
 
         handleRandomize={handleRandomize}
       />
