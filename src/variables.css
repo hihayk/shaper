@@ -75,6 +75,7 @@
   --c-body: var(--dark);
   --c-bodyDimmed: hsla(var(--greyHue), var(--greySaturation), var(--grey-8-lightness), 0.5);
   --c-fieldBorder: var(--c-grey-2);
+  --c-buttonBg: var(--c-grey-2);
 }
 
 .darkMode {
@@ -85,4 +86,5 @@
   --c-body: var(--c-grey-1);
   --c-bodyDimmed: hsla(var(--greyHue), var(--greySaturation), var(--grey-1-lightness), 0.5);
   --c-fieldBorder: var(--c-grey-6);
+  --c-buttonBg: var(--c-grey-6);
 }

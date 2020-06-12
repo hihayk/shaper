@@ -23,13 +23,17 @@
   padding: var(--textFrameY) var(--textFrameX);
   font: inherit;
   border: none;
-  background-color: var(--c-grey-2);
+  background-color: var(--c-buttonBg);
   appearance: none;
   border-radius: var(--radius);
   font-weight: 500;
   cursor: pointer;
-  color: var(--dark);
+  color: var(--c-body);
   letter-spacing: 0.03em;
+}
+
+.buttonSmall {
+  font-size: var(--text-xs);
 }
 
 .roundButtons .button {

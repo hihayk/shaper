@@ -2,13 +2,10 @@ import React from 'react'
 import './demo-email.css'
 
 const emails = [
-  { name: 'Brian', content: 'This device includes 4 delays that can be patched together in the way that the user wishes, this allows greater control to generate loops and feedback.' },
-  { name: 'Brian', content: 'This device includes 4 delays that can be patched together in the way that the user wishes, this allows greater control to generate loops and feedback.' },
-  { name: 'Brian Dog', content: 'This device includes 4 delays that can be patched together in the way that the user wishes, this allows greater control to generate loops and feedback.' },
-  { name: 'Brian', content: 'This device includes 4 delays that can be patched together in the way that the user wishes, this allows greater control to generate loops and feedback.' },
-  { name: 'Brian', content: 'This device includes 4 delays that can be patched together in the way that the user wishes, this allows greater control to generate loops and feedback.' },
-  { name: 'Brian', content: 'This device includes 4 delays that can be patched together in the way that the user wishes, this allows greater control to generate loops and feedback.' },
-  { name: 'Brian', content: 'This device includes 4 delays that can be patched together in the way that the user wishes, this allows greater control to generate loops and feedback.' },
+  { name: 'Brian Dog', handle: '@brian', content: 'This device includes 4 delays that can be patched together in the way that the user wishes, this allows greater control to generate loops and feedback.' },
+  { name: 'Brian Dog', handle: '@brian', content: 'This device includes 4 delays that can be patched together in the way that the user wishes, this allows greater control to generate loops and feedback.' },
+  { name: 'Brian Dog', handle: '@brian', content: 'This device includes 4 delays that can be patched together in the way that the user wishes, this allows greater control to generate loops and feedback.' },
+  { name: 'Brian Dog', handle: '@brian', content: 'This device includes 4 delays that can be patched together in the way that the user wishes, this allows greater control to generate loops and feedback.' },
 ]
 const menuItems = [
   'Menu item', 'Another', 'Third', 'More'
@@ -53,7 +50,7 @@ const DemoEmail = () => (
         {emails.map((email, index) => (
           <div className="email" key={index}>
             <div className="listCell">{email.name}</div>
-            <div className="listCell">{email.content}</div>
+            <div className="listCell c-bodyDimmed">{email.content}</div>
           </div>
         ))}
       </div>
@@ -61,13 +58,25 @@ const DemoEmail = () => (
     <aside className="detailsPanel">
       <div className="detailsCard">
         <div className="text-s mb-m">{emails[2].name}</div>
-        <div className="text-m mb-m">{emails[2].content}</div>
-        <div className="text-s mb-l">{emails[2].content}</div>
+        <div className="text-m mb-m">This device includes 4 delays that can be patched together</div>
+        <div className="text-s mb-l c-bodyDimmed">{emails[2].content}</div>
         <div className="detailsActions">
           <button className="button mr-s">Cancel</button>
           <button className="button button-accent">Save</button>
         </div>
+      </div>
+
+      <div className="mb-l"></div>
+
+      <div className="userCard">
+        <div className="userCardAvatar"></div>
+        <div className="userCardInfo">
+          <div className="userCardName">{emails[1].name}</div>
+          <div className="userCardHandle c-bodyDimmed">{emails[1].handle}</div>
         </div>
+        
+        <button className="button buttonSmall">Follow</button>
+      </div>
     </aside>
   </div>
 )

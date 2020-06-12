@@ -96,3 +96,20 @@ main {
 .menuItem.active {
   background-color: var(--c-overlay); 
 }
+
+.userCard {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: var(--space-m);
+  padding: var(--space-m);
+  border-radius: var(--radius);
+  background-color: var(--c-overlay);
+  align-items: center;
+}
+
+.userCardAvatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  background-color: var(--accent);
+}
