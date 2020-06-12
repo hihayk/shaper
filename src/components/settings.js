@@ -210,19 +210,24 @@ const Settings = ({
             switchIsActive={buttonRound}
             onChange={() => setButtonRound(!buttonRound)}
           />
+
+        </div>
+        <div className="settingsGridColumn triggersColumn">
+          <div className="randomButtonSection">
+            <button
+              className="triggerButton"
+              onClick={() => handleRandomize()}
+            >
+              Randomize
+            </button>
+          </div>
+          <div className="xBorder" />
           <Setting
             label="Dark mode"
             settingType="switch"
             switchIsActive={darkMode}
             onChange={() => setDarkMode(!darkMode)}
           />
-
-        </div>
-        <div className="settingsGridColumn triggersColumn">
-          <button
-            className="triggerButton"
-            onClick={() => handleRandomize()}
-          >Randomize</button>
         </div>
       </div>
     </div>

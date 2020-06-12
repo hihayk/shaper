@@ -46,16 +46,21 @@ input[type=number] {
 
 .triggersColumn {
   border-left: 1px solid hsla(0, 0%, 100%, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
   padding-left: 2rem;
+  grid-template-rows: 1fr 1px 1fr;
+  justify-items: center;
+  align-items: center;
 }
 
 @media (min-width: 1280px) {
   .triggersColumn {
     width: 18rem;
   }
+}
+
+.randomButtonSection {
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
 }
 
 .triggerButton {
@@ -65,6 +70,12 @@ input[type=number] {
   color: #1B1B1B;
   padding: 0.5em 0.8em;
   cursor: pointer;
+}
+
+.xBorder {
+  height: 1px;
+  width: 100%;
+  background-color: hsla(0, 0%, 100%, 0.1);;
 }
 
 .settingLabel {

@@ -24,7 +24,7 @@ function App() {
   const [radius, setRadius] = useState(initialState.radius)
   const [fieldBorderWidth, setFieldBorderWidth] = useState(initialState.fieldBorderWidth)
   const [buttonRound, setButtonRound] = useState(initialState.buttonRound)
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(false)
 
   const handleRandomize = () => {
     setFontFamily(getRandomObject().fontFamily)
