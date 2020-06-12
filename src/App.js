@@ -35,12 +35,12 @@ function App() {
   const [unit, setUnit] = useState(0.5)
   const [accentHue, setAccentHue] = useState(initialState.accentHue)
   const [accentSaturation, setAccentSaturation] = useState(initialState.accentSaturation)
-  const [accentLightness, setAccentLightness] = useState(40)
+  const [accentLightness, setAccentLightness] = useState(initialState.accentLightness)
   const [greySaturation, setGreySaturation] = useState(initialState.greySaturation)
   const [radius, setRadius] = useState(initialState.radius)
   const [fieldBorderWidth, setFieldBorderWidth] = useState(initialState.fieldBorderWidth)
   const [buttonRound, setButtonRound] = useState(initialState.buttonRound)
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(initialState.darkMode)
 
   const handleRandomize = () => {
     setFontFamily(getRandomObject().fontFamily)
