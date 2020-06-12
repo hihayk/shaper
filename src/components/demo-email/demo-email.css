@@ -24,10 +24,12 @@
   border-left: 1px solid var(--c-border);
   width: calc(60 * var(--unit));
   padding: var(--space-xl);
+  background-color: var(--c-overlay);
 }
 
 main {
   padding: var(--space-xl);
+  /* background-color: var(--c-overlay); */
 }
 
 .emails {
@@ -85,7 +87,7 @@ main {
 .detailsCard {
   padding: var(--space-l);
   border-radius: var(--radius);
-  background-color: var(--c-overlay); 
+  background-color: var(--c-background); 
 }
 
 .menuItem {
@@ -103,7 +105,7 @@ main {
   grid-gap: var(--space-m);
   padding: var(--space-m);
   border-radius: var(--radius);
-  background-color: var(--c-overlay);
+  background-color: var(--c-background);
   align-items: center;
 }
 

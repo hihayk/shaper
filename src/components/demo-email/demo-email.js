@@ -15,7 +15,7 @@ const DemoEmail = () => (
   <div className="emailWrapper">
     <aside className="sidebar">
       <div className="logo mb-xl"></div>
-      <button className="button button-accent mb-xl">New</button>
+      <button className="button button-accent text-l mb-xl">New</button>
       {menuItems.map((menuItem, index) => (
         <div className={index === 1 ? 'menuItem active' : 'menuItem'} key={index}>
           {menuItem}
@@ -66,7 +66,7 @@ const DemoEmail = () => (
         </div>
       </div>
 
-      <div className="mb-l"></div>
+      <div className="mb-m"></div>
 
       <div className="userCard">
         <div className="userCardAvatar"></div>
