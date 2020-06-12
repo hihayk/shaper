@@ -113,6 +113,17 @@ input[type=range] {
   margin-bottom: 0.5rem;
 }
 
+.switchSettingWrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.switchSettingWrapper .settingLabel {
+  margin-bottom: 0;
+  padding-left: 0.5rem;
+}
+
 .switchTrack {
   background-color: hsla(0, 0%, 100%, 0.2);
   width: 2rem;
@@ -128,10 +139,6 @@ input[type=range] {
   cursor: pointer;
 }
 
-.switchTrack input:checked + .switchKnob {
-  transform: translate(1rem) scale(0.8);
-}
-
 .switchKnob {
   cursor: pointer;
   width: 1rem;
@@ -142,4 +149,8 @@ input[type=range] {
   display: block;
   background-color: white;
   transition: 0.15s;
+}
+
+.switchTrack input:checked + .switchKnob {
+  transform: translate(1rem) scale(0.8);
 }

@@ -25,12 +25,13 @@ const Setting = ({
           <img alt="" src={illustration} className="settingIllustration"/>
         </div>
       )}
-      <label className="settingLabel" htmlFor={id}>
-        {label}
-      </label>
+      
 
       {settingType === "input" && (
         <>
+          <label className="settingLabel" htmlFor={id}>
+            {label}
+          </label>
           <input
             type={inputType}
             value={value}
@@ -56,10 +57,15 @@ const Setting = ({
         </>
       )}
       {settingType === "switch" && (
-        <label className="switchTrack">
-          <input type="checkbox" checked={switchIsActive} onChange={onChange} />
-          <div className="switchKnob"></div>
-        </label>
+        <div className="switchSettingWrapper">
+          <label className="switchTrack">
+            <input type="checkbox" checked={switchIsActive} onChange={onChange} />
+            <div className="switchKnob"></div>
+          </label>
+          <label className="settingLabel" htmlFor={id}>
+            {label}
+          </label>
+        </div>
       )}
     </div>
   )

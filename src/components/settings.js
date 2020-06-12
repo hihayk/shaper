@@ -116,7 +116,7 @@ const Settings = ({
             -
           </h2>
           <Setting
-            label="Text frame Y"
+            label="Text frame"
             illustration={frameY}
             settingType="input"
             inputType="range"
@@ -128,7 +128,7 @@ const Settings = ({
             valueUnit="em"
           />
           <Setting
-            label="Text frame ratio"
+            label="Button proportion"
             illustration={frameRatio}
             settingType="input"
             inputType="range"
