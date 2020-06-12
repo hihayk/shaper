@@ -62,8 +62,7 @@ const DemoEmail = () => (
       <div className="detailsCard">
         <div className="text-s mb-m">{emails[2].name}</div>
         <div className="text-m mb-m">{emails[2].content}</div>
-        <div className="text-s mb-m">{emails[2].content}</div>
-        <textarea rows="6" className="textarea mb-m">{emails[2].content}</textarea>
+        <div className="text-s mb-l">{emails[2].content}</div>
         <div className="detailsActions">
           <button className="button mr-s">Cancel</button>
           <button className="button button-accent">Save</button>
