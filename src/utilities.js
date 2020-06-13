@@ -20,8 +20,10 @@ export const fonts = [
   'IBM Plex Sans',
   'futura, sans-serif',
   'Roboto Mono',
+  'Nunito',
   'helvetica, sans-serif',
-  'Merriweather'
+  'Merriweather',
+  'Work Sans',
 ]
 
 const buttonIsRound = [true, false, false, false]
