@@ -15,13 +15,21 @@ export const getProperty = (property) => {
   getComputedStyle(document.documentElement).getPropertyValue(`--${property}`);
 }
 
-export const fonts = ['system-ui','IBM Plex Sans','futura, sans-serif','Roboto Mono','sans-serif',]
+export const fonts = [
+  'system-ui',
+  'IBM Plex Sans',
+  'futura, sans-serif',
+  'Roboto Mono',
+  'helvetica, sans-serif',
+  'Merriweather'
+]
 
 const buttonIsRound = [true, false, false, false]
 
 export const getRandomObject = () => {
+  const randomFontsPosition = randomNumber(0, fonts.length-1, 'full')
   return {
-    fontFamily: fonts[randomNumber(0, 3, 'full')],
+    fontFamily: fonts[randomFontsPosition],
     textSizeIncrement: randomNumber(1.2, 1.4),
     baseTextSize: randomNumber(0.875, 1.1),
     textFrameRatio: randomNumber(1.2, 3),
