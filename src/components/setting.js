@@ -33,6 +33,7 @@ const Setting = ({
             {label}
           </label>
           <input
+            id={id}
             type={inputType}
             value={value}
             onChange={onChange}
@@ -43,6 +44,7 @@ const Setting = ({
           {inputType === "range" && (
             <div className="settingNumberInputWrapper">
               <input
+                id={id}
                 className="settingTextInput settingTextInputSmall"
                 type="number"
                 value={value}
@@ -59,7 +61,7 @@ const Setting = ({
       {settingType === "switch" && (
         <div className="switchSettingWrapper">
           <label className="switchTrack">
-            <input type="checkbox" checked={switchIsActive} onChange={onChange} />
+            <input id={id} type="checkbox" checked={switchIsActive} onChange={onChange} />
             <div className="switchKnob"></div>
           </label>
           <label className="settingLabel" htmlFor={id}>

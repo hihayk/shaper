@@ -55,6 +55,7 @@ const Settings = ({
             illustration={textIncrement}
             settingType="input"
             inputType="range"
+            id="textSizeIncrement"
             value={textSizeIncrement}
             onChange={(e) => setTextSizeIncrement(e.target.value)}
             min={1}
@@ -66,6 +67,7 @@ const Settings = ({
             label="Base size"
             settingType="input"
             inputType="range"
+            id="baseTextSize"
             value={baseTextSize}
             onChange={(e) => setBaseTextSize(e.target.value)}
             min={0.8}
@@ -75,9 +77,9 @@ const Settings = ({
           />
           <Setting
             label="Font"
-            id="fontFamily"
             settingType="input"
             inputType="text"
+            id="fontFamily"
             value={fontFamily}
             onChange={(e) => setFontFamily(e.target.value)}
           />
@@ -91,6 +93,7 @@ const Settings = ({
             illustration={unitSvg}
             settingType="input"
             inputType="range"
+            id="unit"
             value={unit}
             onChange={(e) => setUnit(e.target.value)}
             min={0.4}
@@ -103,6 +106,7 @@ const Settings = ({
             illustration={space}
             settingType="input"
             inputType="range"
+            id="spaceIncrement"
             value={spaceIncrement}
             onChange={(e) => setSpaceIncrement(e.target.value)}
             min={1}
@@ -120,6 +124,7 @@ const Settings = ({
             illustration={frameY}
             settingType="input"
             inputType="range"
+            id="textFrameY"
             value={textFrameY}
             onChange={(e) => setTextFrameY(e.target.value)}
             min={0}
@@ -132,6 +137,7 @@ const Settings = ({
             illustration={frameRatio}
             settingType="input"
             inputType="range"
+            id="textFrameRatio"
             value={textFrameRatio}
             onChange={(e) => setTextFrameRatio(e.target.value)}
             min={1}
@@ -148,6 +154,7 @@ const Settings = ({
             label="Accent hue"
             settingType="input"
             inputType="range"
+            id="accentHue"
             value={accentHue}
             onChange={(e) => setAccentHue(e.target.value)}
             min={0}
@@ -159,6 +166,7 @@ const Settings = ({
             label="Accent saturation"
             settingType="input"
             inputType="range"
+            id="accentSaturation"
             value={accentSaturation}
             onChange={(e) => setAccentSaturation(e.target.value)}
             min={0}
@@ -170,6 +178,7 @@ const Settings = ({
             label="Accent lightness"
             settingType="input"
             inputType="range"
+            id="accentLightness"
             value={accentLightness}
             onChange={(e) => setAccentLightness(e.target.value)}
             min={0}
@@ -186,6 +195,7 @@ const Settings = ({
             label="Radius"
             settingType="input"
             inputType="range"
+            id="radius"
             value={radius}
             onChange={(e) => setRadius(e.target.value)}
             min={0}
@@ -197,6 +207,7 @@ const Settings = ({
             label="Field border"
             settingType="input"
             inputType="range"
+            id="fieldBorderWidth"
             value={fieldBorderWidth}
             onChange={(e) => setFieldBorderWidth(e.target.value)}
             min={1}
@@ -207,6 +218,7 @@ const Settings = ({
           <Setting
             label="Round buttons"
             settingType="switch"
+            id="buttonRound"
             switchIsActive={buttonRound}
             onChange={() => setButtonRound(!buttonRound)}
           />
@@ -216,6 +228,7 @@ const Settings = ({
           <Setting
             label="Dark mode"
             settingType="switch"
+            id="darkMode"
             switchIsActive={darkMode}
             onChange={() => setDarkMode(!darkMode)}
           />
