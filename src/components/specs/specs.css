@@ -1,0 +1,48 @@
+.specsWrapper {
+  padding: 2rem;
+  background-color: var(--c-background);
+  color: var(--c-body);
+  font-family: var(--fontFamily);
+}
+
+.snippetsSection {
+  display: grid;
+  grid-gap: var(--space-l);
+}
+
+.snippetSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--space-s);
+}
+
+.previewSection {
+  border: 1px solid var(--c-border);
+  padding: var(--space-l);
+}
+
+.codeSection {
+  background-color: var(--c-overlay);
+  padding: var(--space-l);
+  overflow: auto;
+}
+
+.codeSection code {
+  font-family: 'Roboto Mono';
+}
+
+.demoSpace {
+  background-color: currentColor;
+}
+
+.demoSpace + .demoSpace {
+  margin-top: var(--space-s);
+}
+
+.demoSpace-s { width: var(--space-s); height: var(--space-s); }
+.demoSpace-m { width: var(--space-m); height: var(--space-m); }
+.demoSpace-l { width: var(--space-l); height: var(--space-l); }
+.demoSpace-xl { width: var(--space-xl); height: var(--space-xl); }
+.demoSpace-2xl { width: var(--space-2xl); height: var(--space-2xl); }
+.demoSpace-3xl { width: var(--space-3xl); height: var(--space-3xl); }
+.demoSpace-4xl { width: var(--space-4xl); height: var(--space-4xl); }

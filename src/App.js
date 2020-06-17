@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './variables.css';
 import './utilities.css';
 import './common.css';
-import DemoContent from './components/demo-content';
+import Specs from './components/specs/specs';
 import { getRandomObject, setProperty, numberToUnit, fonts } from './utilities';
 import Settings from './components/settings'
 import DemoEmail from './components/demo-email/demo-email';
@@ -23,6 +23,7 @@ const initialState = {
   fieldBorderWidth: 2,
   buttonRound: false,
   darkMode: false,
+  preview: 'specs',
 }
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
   const [fieldBorderWidth, setFieldBorderWidth] = useState(initialState.fieldBorderWidth)
   const [buttonRound, setButtonRound] = useState(initialState.buttonRound)
   const [darkMode, setDarkMode] = useState(initialState.darkMode)
+  const [preview, setPreview] = useState(initialState.preview)
 
   const handleRandomize = () => {
     setFontFamily(getRandomObject().fontFamily)
@@ -119,11 +121,24 @@ function App() {
         setButtonRound={setButtonRound}
         darkMode={darkMode}
         setDarkMode={setDarkMode}
+        preview={preview}
+        setPreview={setPreview}
 
         handleRandomize={handleRandomize}
       />
-      {/* <DemoContent /> */}
-      <DemoEmail />
+      {preview === 'specs' ? (
+        <Specs
+          baseTextSize={baseTextSize}
+          textSizeIncrement={textSizeIncrement}
+          spaceIncrement={spaceIncrement}
+          unit={unit}
+          textFrameY={textFrameY}
+          textFrameRatio={textFrameRatio}
+          fontFamily={fontFamily}
+        />
+      ) : (
+        <DemoEmail />
+      )}
     </div>
   );
 }

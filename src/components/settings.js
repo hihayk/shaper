@@ -39,6 +39,8 @@ const Settings = ({
   setButtonRound,
   darkMode,
   setDarkMode,
+  preview,
+  setPreview,
 
   handleRandomize,
 }) => {
@@ -225,6 +227,15 @@ const Settings = ({
 
         </div>
         <div className="settingsGridColumn triggersColumn">
+          <div className="randomButtonSection">
+            <button
+              className="triggerButton"
+              onClick={() => handleRandomize()}
+            >
+              Randomize
+            </button>
+          </div>
+          <div className="xBorder" />
           <Setting
             label="Dark mode"
             settingType="switch"
@@ -233,13 +244,21 @@ const Settings = ({
             onChange={() => setDarkMode(!darkMode)}
           />
           <div className="xBorder" />
-          <div className="randomButtonSection">
-            <button
-              className="triggerButton"
-              onClick={() => handleRandomize()}
-            >
-              Randomize
-            </button>
+          <div>
+            <div className="settingButtonGroup">
+              <button
+                className={preview === 'demo' ? 'settingButton active' : 'settingButton'}
+                onClick={() => setPreview('demo')}
+              >
+                Demo
+              </button>
+              <button
+                className={preview === 'specs' ? 'settingButton active' : 'settingButton'}
+                onClick={() => setPreview('specs')}
+              >
+                Specs
+              </button>
+            </div>
           </div>
         </div>
       </div>
