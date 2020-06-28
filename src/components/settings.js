@@ -190,6 +190,23 @@ const Settings = ({
           />
         </div>
         <div className="settingsGridColumn">
+          <h2 className="settingsGridColumnTitle" style={{opacity: 0}}>
+            -
+          </h2>
+          <Setting
+            label="Grey saturation"
+            settingType="input"
+            inputType="range"
+            id="greySaturation"
+            value={greySaturation}
+            onChange={(e) => setGreySaturation(e.target.value)}
+            min={0}
+            max={100}
+            step={1}
+            valueUnit="%"
+          />
+        </div>
+        <div className="settingsGridColumn">
           <h2 className="settingsGridColumnTitle">
             Layer
           </h2>
@@ -227,6 +244,16 @@ const Settings = ({
 
         </div>
         <div className="settingsGridColumn triggersColumn">
+          <div className="mainLogoSection">
+            <div className="mainLogo">
+              <span style={{opacity: 0.1}}>S</span>
+              <span style={{opacity: 0.3}}>S</span>
+              STRINGS
+              <span style={{opacity: 0.3}}>S</span>
+              <span style={{opacity: 0.1}}>S</span>
+            </div>
+          </div>
+          <div className="xBorder" style={{margin: '0.5rem 0'}} />
           <div className="randomButtonSection">
             <button
               className="triggerButton"
@@ -235,7 +262,6 @@ const Settings = ({
               Randomize
             </button>
           </div>
-          <div className="xBorder" />
           <Setting
             label="Dark mode"
             settingType="switch"
@@ -243,7 +269,6 @@ const Settings = ({
             switchIsActive={darkMode}
             onChange={() => setDarkMode(!darkMode)}
           />
-          <div className="xBorder" />
           <div>
             <div className="settingButtonGroup">
               <button
@@ -259,6 +284,12 @@ const Settings = ({
                 Specs
               </button>
             </div>
+          </div>
+
+          <div className="xBorder" style={{margin: '0.5rem 0'}} />
+
+          <div className="aboutSection">
+            <a href="https://github.com/hihayk/strings" target="_blank" rel="noopener noreferrer">Github</a>
           </div>
         </div>
       </div>

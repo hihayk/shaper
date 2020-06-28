@@ -9,21 +9,21 @@ import DemoEmail from './components/demo-email/demo-email';
 
 const initialState = {
   fontFamily: fonts[0],
-  textSizeIncrement: 1.2,
+  textSizeIncrement: 1.23,
   baseTextSize: 0.9,
-  textFrameRatio: 2,
-  textFrameY: 0.7,
+  textFrameRatio: 2.37,
+  textFrameY: 0.8,
   spaceIncrement: 1.65,
   unit: 0.5,
-  accentHue: 338,
-  accentSaturation: 54,
+  accentHue: 254,
+  accentSaturation: 31,
   accentLightness: 50,
-  greySaturation: 10,
-  radius: 0.3,
+  greySaturation: 5,
+  radius: 0.4,
   fieldBorderWidth: 2,
   buttonRound: false,
   darkMode: false,
-  preview: 'specs',
+  preview: 'demo',
 }
 
 function App() {

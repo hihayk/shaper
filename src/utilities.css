@@ -6,6 +6,23 @@
   color: var(--c-bodyDimmed);
 }
 
+.bgc-grey-1 { background-color: var(--c-grey-1) }
+.bgc-grey-2 { background-color: var(--c-grey-2) }
+.bgc-grey-3 { background-color: var(--c-grey-3) }
+.bgc-grey-4 { background-color: var(--c-grey-4) }
+.bgc-grey-5 { background-color: var(--c-grey-5) }
+.bgc-grey-6 { background-color: var(--c-grey-6) }
+.bgc-grey-7 { background-color: var(--c-grey-7) }
+.bgc-grey-8 { background-color: var(--c-grey-8) }
+
+.bgc-primary-2xlight { background-color: var(--c-primary-2xlight) }
+.bgc-primary-xlight { background-color: var(--c-primary-xlight) }
+.bgc-primary-light { background-color: var(--c-primary-light) }
+.bgc-primary { background-color: var(--c-primary) }
+.bgc-primary-dark { background-color: var(--c-primary-dark) }
+.bgc-primary-xdark { background-color: var(--c-primary-xdark) }
+.bgc-primary-2xdark { background-color: var(--c-primary-2xdark) }
+
 .text-xs { font-size: var(--text-xs) }
 .text-s { font-size: var(--text-s) }
 .text-m { font-size: var(--text-m) }

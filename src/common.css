@@ -43,6 +43,15 @@ body {
   cursor: pointer;
   color: var(--c-body);
   letter-spacing: 0.03em;
+  transition: 0.2s;
+}
+
+.button:hover {
+  filter: brightness(1.1);
+}
+
+.button:active {
+  filter: brightness(0.9);
 }
 
 .buttonSmall {
@@ -54,7 +63,6 @@ body {
 }
 
 .button:focus {
-  outline: none;
   box-shadow: 0 0 0 2px var(--focus);
 }
 
@@ -99,5 +107,4 @@ body {
 
 .detailsActions {
   display: flex;
-  justify-content: flex-end;
 }

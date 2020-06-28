@@ -20,12 +20,11 @@ const Setting = ({
       style={props.max && {
         '--value': `${100-(props.max - value)/(props.max - props.min)*100}%`
       }}>
-      {illustration && (
+      {/* {illustration && (
         <div className="settingIllustrationSection">
           <img alt="" src={illustration} className="settingIllustration"/>
         </div>
-      )}
-      
+      )} */}
 
       {settingType === "input" && (
         <>

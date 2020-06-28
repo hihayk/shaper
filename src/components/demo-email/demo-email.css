@@ -11,13 +11,13 @@
   width: 100%;
   min-height: 100vh;
   background: var(--c-background);
+  min-width: 1280px;
 }
 
 .sidebar {
   border-right: 1px solid var(--c-border);
   min-width: calc(30 * var(--unit));
   padding: var(--space-l);
-  /* background-color: var(--c-overlay); */
 }
 
 .detailsPanel {
@@ -97,6 +97,12 @@ main {
 
 .menuItem.active {
   background-color: var(--c-overlay); 
+  font-weight: bold;
+}
+
+.menuItem:not(.active) {
+  cursor: pointer;
+  color: var(--c-bodyDimmed);
 }
 
 .userCard {
@@ -114,4 +120,103 @@ main {
   height: 2rem;
   border-radius: 100%;
   background-color: var(--accent);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  grid-gap: var(--space-s);
+  align-items: end;
+}
+
+.tabs {
+  display: flex;
+}
+
+.tab {
+  font-size: var(--text-m);
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.2em;
+}
+
+.tab:not(.active) {
+  cursor: pointer;
+  color: var(--c-bodyDimmed);
+}
+
+.tab + .tab {
+  margin-left: var(--space-l);
+}
+
+.tab.active {
+  border-color: var(--accent);
+}
+
+.messageBox {
+  padding: var(--space-m);
+  border-radius: var(--radius);
+  background-color: var(--c-primary-3xlight);
+  color: var(--c-primary-xdark);
+}
+
+.chartCard {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: var(--space-l);
+  border-radius: var(--radius);
+  background-color: var(--c-background);
+  align-items: center;
+}
+
+.chartCard .chart:first-child {
+  padding-right: var(--space-l);
+}
+
+.chartCard .chart + .chart {
+  padding-left: var(--space-l);
+  border-left: 1px solid var(--c-border);
+}
+
+.chartCard svg {
+  display: block;
+}
+
+.highlightCard {
+  background-color: var(--accent);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: var(--space-m);
+  padding: var(--space-l);
+  border-radius: var(--radius);
+  align-items: center;
+  color: white;
+}
+
+.highlightCardAvatar {
+  background-color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+}
+
+.highlightCardAvatars {
+  display: flex;
+}
+
+.highlightCardAvatar + .highlightCardAvatar {
+  margin-left: -2.2rem;
+}
+
+.highlightCardAvatar:first-child {
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.highlightCardAvatar:nth-child(2) {
+  z-index: 2;
+  opacity: 0.5;
+}
+
+.highlightCardAvatar:nth-child(3) {
+  z-index: 3;
 }

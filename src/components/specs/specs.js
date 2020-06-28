@@ -88,14 +88,14 @@ const Specs = ({
               <div
                 className="mb-s"
                 style={{
-                  border: '1px solid',
-                  padding: 'var(--textFrameY)'
+                  border: 'solid var(--c-overlay)',
+                  borderWidth: 'var(--textFrameY)'
                 }}
               >Text frame even</div>
               <div
                 style={{
-                  border: '1px solid',
-                  padding: 'var(--textFrameY) var(--textFrameX)'
+                  border: 'solid var(--c-overlay)',
+                  borderWidth: 'var(--textFrameY) var(--textFrameX)'
                 }}
               >Text frame ratio</div>
             </>
@@ -106,6 +106,35 @@ const Specs = ({
 --textFrameY: ${textFrameY}em;
 --textFrameX: calc(var(--textFrameY) * var(--textFrameRatio));
   `}
+        />
+        <div className="text-l">Color</div>
+        <Snippet
+          preview={(
+            <>
+              <div className="colorsRow">
+                <div className="colorBox bgc-grey-1"></div>
+                <div className="colorBox bgc-grey-2"></div>
+                <div className="colorBox bgc-grey-3"></div>
+                <div className="colorBox bgc-grey-4"></div>
+                <div className="colorBox bgc-grey-5"></div>
+                <div className="colorBox bgc-grey-6"></div>
+                <div className="colorBox bgc-grey-7"></div>
+                <div className="colorBox bgc-grey-8"></div>
+              </div>
+              <div className="mb-m"></div>
+              <div className="colorsRow">
+                <div className="colorBox bgc-primary-2xlight"></div>
+                <div className="colorBox bgc-primary-xlight"></div>
+                <div className="colorBox bgc-primary-light"></div>
+                <div className="colorBox bgc-primary"></div>
+                <div className="colorBox bgc-primary-dark"></div>
+                <div className="colorBox bgc-primary-xdark"></div>
+                <div className="colorBox bgc-primary-2xdark"></div>
+              </div>
+            </>
+          )}
+          code={
+``}
         />
       </div>
     </div>

@@ -46,3 +46,16 @@
 .demoSpace-2xl { width: var(--space-2xl); height: var(--space-2xl); }
 .demoSpace-3xl { width: var(--space-3xl); height: var(--space-3xl); }
 .demoSpace-4xl { width: var(--space-4xl); height: var(--space-4xl); }
+
+.colorBox {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  display: block;
+}
+
+.colorsRow {
+  display: inline-grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: var(--space-s);
+}
