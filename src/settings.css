@@ -64,6 +64,7 @@ input[type=number] {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  text-align: center;
 }
 
 .mainLogo span {

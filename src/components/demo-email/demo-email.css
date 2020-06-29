@@ -65,14 +65,14 @@ main {
   width: 2rem;
   height: 2rem;
   border-radius: 100%;
-  background-color: var(--accent);
+  background-color: var(--c-accent);
 }
 
 .postAvatar {
   width: 3rem;
   height: 3rem;
   border-radius: 100%;
-  background-color: var(--accent);
+  background-color: var(--c-accent);
 }
 
 .post {
@@ -119,7 +119,7 @@ main {
   width: 2rem;
   height: 2rem;
   border-radius: 100%;
-  background-color: var(--accent);
+  background-color: var(--c-accent);
 }
 
 .formGrid {
@@ -149,7 +149,7 @@ main {
 }
 
 .tab.active {
-  border-color: var(--accent);
+  border-color: var(--c-accent);
 }
 
 .messageBox {
@@ -182,7 +182,7 @@ main {
 }
 
 .highlightCard {
-  background-color: var(--accent);
+  background-color: var(--c-accent);
   display: grid;
   grid-template-columns: 1fr auto;
   grid-gap: var(--space-m);

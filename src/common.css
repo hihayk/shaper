@@ -67,7 +67,7 @@ body {
 }
 
 .button-accent {
-  background-color: var(--accent);
+  background-color: var(--c-accent);
   color: var(--light);
 }
 
@@ -86,9 +86,9 @@ body {
   display: flex;
   padding: 2rem;
   font-size: var(--text-s);
-  color: var(--c-grey-8);
+  color: var(--c-grey8);
   font-family: var(--fontFamily);
-  background-color: var(--c-grey-1);
+  background-color: var(--c-grey1);
 }
 
 .wrapper .column {

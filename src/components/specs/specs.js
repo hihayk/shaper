@@ -112,14 +112,14 @@ const Specs = ({
           preview={(
             <>
               <div className="colorsRow">
-                <div className="colorBox bgc-grey-1"></div>
-                <div className="colorBox bgc-grey-2"></div>
-                <div className="colorBox bgc-grey-3"></div>
-                <div className="colorBox bgc-grey-4"></div>
-                <div className="colorBox bgc-grey-5"></div>
-                <div className="colorBox bgc-grey-6"></div>
-                <div className="colorBox bgc-grey-7"></div>
-                <div className="colorBox bgc-grey-8"></div>
+                <div className="colorBox bgc-grey1"></div>
+                <div className="colorBox bgc-grey2"></div>
+                <div className="colorBox bgc-grey3"></div>
+                <div className="colorBox bgc-grey4"></div>
+                <div className="colorBox bgc-grey5"></div>
+                <div className="colorBox bgc-grey6"></div>
+                <div className="colorBox bgc-grey7"></div>
+                <div className="colorBox bgc-grey8"></div>
               </div>
               <div className="mb-m"></div>
               <div className="colorsRow">
