@@ -72,23 +72,18 @@ input[type=number] {
   margin-bottom: 0.7rem;
 }
 
-.infoIcon {
-  background-color: hsla(0, 0%, 100%, 0.2);
-  color: #1B1B1B;
-  color: white;
-  text-align: center;
+.ghIcon {
   width: 1.5rem;
   height: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  font-weight: bold;
-  /* font-family: georgia; */
-  font-family: monospace;
-  font-size: 1.2rem;
   cursor: pointer;
   text-decoration: none;
+  color: inherit;
+  opacity: 0.5;
+}
+
+.ghIcon svg {
+  display: block;
+  width: 100%;
 }
 
 .aboutSection {
@@ -108,7 +103,7 @@ input[type=number] {
   display: grid;
   justify-items: center;
   align-items: center;
-  padding: 0 4rem;
+  padding: 0 3.5rem;
 }
 
 .randomButtonSection {
