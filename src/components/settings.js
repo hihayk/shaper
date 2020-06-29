@@ -288,10 +288,10 @@ const Settings = ({
           </div>
 
           {/* <div className="aboutSection">
-            <a href="https://github.com/hihayk/strings" target="_blank" rel="noopener noreferrer">Github</a>
+            <a href="https://github.com/hihayk/shaper" target="_blank" rel="noopener noreferrer">Github</a>
           </div> */}
 
-          <a className="infoIcon" href="https://github.com/hihayk/strings" target="_blank" rel="noopener noreferrer">i</a>
+          <a className="infoIcon" href="https://github.com/hihayk/shaper" target="_blank" rel="noopener noreferrer">i</a>
         </div>
       </div>
     </div>
