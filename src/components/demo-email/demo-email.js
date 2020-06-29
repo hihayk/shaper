@@ -23,7 +23,7 @@ const DemoEmail = () => (
     </aside>
     <main>
       <div className="mb-l text-xl">
-        <strong>The Interface</strong>
+        <strong>The Interpolation Time</strong>
       </div>
       <div className="tabs mb-l">
         <strong className="tab active">First</strong>

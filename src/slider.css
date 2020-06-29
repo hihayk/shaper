@@ -2,6 +2,8 @@ input[type=range] {
   -webkit-appearance: none;
   width: 100%;
   background: transparent;
+  height: 1.5rem;
+  cursor: pointer;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -12,6 +14,15 @@ input[type=range]:focus {
   outline: none;
 }
 
+input[type=range]:hover::-webkit-slider-thumb,
+input[type=range]:focus::-webkit-slider-thumb {
+  transform: scale(1.6);
+}
+input[type=range]:hover::-moz-range-thumb,
+input[type=range]:focus::-moz-range-thumb {
+  transform: scale(1.6);
+}
+
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   margin-top: -3px;
@@ -19,7 +30,7 @@ input[type=range]::-webkit-slider-thumb {
   width: 0.5rem;
   background: white;
   border-radius: 100%;
-  cursor: pointer;
+  transition: 0.2s;
 }
 
 input[type=range]::-moz-range-thumb {
@@ -28,7 +39,7 @@ input[type=range]::-moz-range-thumb {
   width: 0.5rem;
   background: white;
   border-radius: 100%;
-  cursor: pointer;
+  transition: 0.2s;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -37,10 +48,6 @@ input[type=range]::-webkit-slider-runnable-track {
   cursor: pointer;
   background: linear-gradient(90deg, hsla(0,0%,100%,1) 0%, hsla(0,0%,100%,1) var(--value), hsla(0,0%,100%,0.2) var(--value));;
   border: none;
-}
-
-input[type=range]:focus::-webkit-slider-runnable-track {
-  /* background: hsla(0,0%,100%,0.4); */
 }
 
 input[type=range]::-moz-range-track {
