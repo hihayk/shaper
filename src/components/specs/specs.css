@@ -11,19 +11,20 @@
 }
 
 .snippetSection {
-  display: grid;
-  grid-gap: var(--space-s);
+  display: flex;
 }
 
 .previewSection {
   border: 1px solid var(--c-border);
   padding: var(--space-l);
+  width: 50%;
 }
 
 .codeSection {
   background-color: var(--c-overlay);
   padding: var(--space-l);
   overflow: auto;
+  width: 50%;
 }
 
 .codeSection code {

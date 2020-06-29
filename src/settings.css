@@ -12,10 +12,11 @@ input[type=number] {
   color: white;
   padding: 2rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  min-width: 1280px;
+  overflow: auto;
 }
 
 .settingsGrid {
+  min-width: 1280px;
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr auto;
@@ -105,15 +106,9 @@ input[type=number] {
   border-left: 1px solid hsla(0, 0%, 100%, 0.1);
   border-right: 1px solid hsla(0, 0%, 100%, 0.1);
   display: grid;
-  /* padding-left: 2rem; */
   justify-items: center;
   align-items: center;
-}
-
-@media (min-width: 1280px) {
-  .triggersColumn {
-    width: 15rem;
-  }
+  padding: 0 4rem;
 }
 
 .randomButtonSection {
@@ -171,7 +166,6 @@ input[type=range] {
 .switchSettingWrapper {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .switchSettingWrapper .settingLabel {
