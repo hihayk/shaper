@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import './variables.css';
 import './utilities.css';
 import './common.css';
 import Specs from './components/specs/specs';
 import { getRandomObject, setProperty, numberToUnit, fonts } from './utilities';
 import Settings from './components/settings'
 import DemoEmail from './components/demo-email/demo-email';
+import { getVariables, darkModeStyles } from './variables'
 
 const initialState = {
   fontFamily: fonts[0],
@@ -43,6 +43,28 @@ function App() {
   const [buttonRound, setButtonRound] = useState(initialState.buttonRound)
   const [darkMode, setDarkMode] = useState(initialState.darkMode)
   const [preview, setPreview] = useState(initialState.preview)
+
+  const variables = getVariables({baseTextSize,
+    textSizeIncrement,
+    fontFamily,
+    unit,
+    spaceIncrement,
+    textFrameRatio,
+    textFrameY,
+    accentHue,
+    accentSaturation,
+    accentLightness,
+    greySaturation,
+  })
+
+  const style = document.createElement('style')
+  document.head.appendChild(style)
+  style.innerHTML = `
+    :root{
+      ${Object.values(variables).join('')}
+    }
+    ${darkModeStyles}
+  `
 
   const handleRandomize = () => {
     setFontFamily(getRandomObject().fontFamily)
@@ -86,7 +108,7 @@ function App() {
       document.querySelector('body').classList.remove('darkMode');
     }
 
-  }, [accentHue, accentLightness, accentSaturation, baseTextSize, buttonRound, darkMode, fieldBorderWidth, fontFamily, greySaturation, radius, spaceIncrement, textFrameRatio, textFrameY, textSizeIncrement, unit])
+  }, [accentHue, accentLightness, accentSaturation, baseTextSize, buttonRound, darkMode, fieldBorderWidth, fontFamily, greySaturation, radius, spaceIncrement, textFrameRatio, textFrameY, textSizeIncrement, unit, variables.type])
 
   return (
     <div>
@@ -135,6 +157,8 @@ function App() {
           textFrameY={textFrameY}
           textFrameRatio={textFrameRatio}
           fontFamily={fontFamily}
+          variables={variables}
+          darkModeStyles={darkModeStyles}
         />
       ) : (
         <DemoEmail />

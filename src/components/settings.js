@@ -287,10 +287,6 @@ const Settings = ({
             <span>R</span>
           </div>
 
-          {/* <div className="aboutSection">
-            <a href="https://github.com/hihayk/shaper" target="_blank" rel="noopener noreferrer">Github</a>
-          </div> */}
-
           <a className="infoIcon" href="https://github.com/hihayk/shaper" target="_blank" rel="noopener noreferrer">i</a>
         </div>
       </div>

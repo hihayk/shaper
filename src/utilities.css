@@ -15,13 +15,7 @@
 .bgc-grey7 { background-color: var(--c-grey7) }
 .bgc-grey8 { background-color: var(--c-grey8) }
 
-.bgc-primary-2xlight { background-color: var(--c-primary-2xlight) }
-.bgc-primary-xlight { background-color: var(--c-primary-xlight) }
-.bgc-primary-light { background-color: var(--c-primary-light) }
-.bgc-primary { background-color: var(--c-primary) }
-.bgc-primary-dark { background-color: var(--c-primary-dark) }
-.bgc-primary-xdark { background-color: var(--c-primary-xdark) }
-.bgc-primary-2xdark { background-color: var(--c-primary-2xdark) }
+.bgc-accent { background-color: var(--c-accent) }
 
 .text-xs { font-size: var(--text-xs) }
 .text-s { font-size: var(--text-s) }

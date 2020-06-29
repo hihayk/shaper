@@ -2,10 +2,12 @@ import React from 'react'
 import './specs.css';
 
 const Snippet = ({preview, code}) => (
-  <div className="snippetSection">
-    <div className="previewSection">
-      {preview}
-    </div>
+  <div className="snippetSection" style={{ gridTemplateColumns: preview ? '1fr 1fr' : '1fr' }}>
+    {preview && (
+      <div className="previewSection">
+        {preview}
+      </div>
+    )}
 
     <div className="codeSection">
       <pre>
@@ -16,13 +18,8 @@ const Snippet = ({preview, code}) => (
 )
 
 const Specs = ({
-  baseTextSize,
-  textSizeIncrement,
-  spaceIncrement,
-  unit,
-  textFrameY,
-  textFrameRatio,
-  fontFamily,
+  variables,
+  darkModeStyles,
 }) => {
   return (
     <div className="specsWrapper">
@@ -31,29 +28,14 @@ const Specs = ({
         <Snippet
           preview={(
             <>
-              <div className="text-xl">Aa</div>
-              <div className="text-l">Aa</div>
-              <div className="text-m">Aa</div>
-              <div className="text-s">Aa</div>
-              <div className="text-xs">Aa</div>
+              <div className="text-xl">Aa 123 handgloves</div>
+              <div className="text-l">Aa 123 handgloves</div>
+              <div className="text-m">Aa 123 handgloves</div>
+              <div className="text-s">Aa 123 handgloves</div>
+              <div className="text-xs">Aa 123 handgloves</div>
             </>
           )}
-          code={
-`--baseTextSize: ${baseTextSize}rem;
---textSizeIncrement: ${textSizeIncrement};
-
---text-xs: calc(var(--baseTextSize) / var(--textSizeIncrement));
---text-s: var(--baseTextSize);
---text-m: calc(var(--text-s) * var(--textSizeIncrement));
---text-l: calc(var(--text-m) * var(--textSizeIncrement));
---text-xl: calc(var(--text-l) * var(--textSizeIncrement));
-
---lineHeightFixedAmount: 0.35rem;
---lineHeightRelativeAmount: 1.1em;
---globalLineHeight: calc(var(--lineHeightFixedAmount) + var(--lineHeightRelativeAmount));
-
---fontFamily: ${fontFamily};
-  `}
+          code={variables.type}
         />
         <div className="text-l">Spacing</div>
         <Snippet
@@ -68,19 +50,7 @@ const Specs = ({
               <div className="demoSpace demoSpace-4xl"></div>
             </>
           )}
-          code={
-`--unit: ${unit}rem;
-
---spaceIncrement: ${spaceIncrement};
-
---space-s: var(--unit);
---space-m: calc(var(--space-s) * var(--spaceIncrement));
---space-l: calc(var(--space-m) * var(--spaceIncrement));
---space-xl: calc(var(--space-l) * var(--spaceIncrement));
---space-2xl: calc(var(--space-xl) * var(--spaceIncrement));
---space-3xl: calc(var(--space-2xl) * var(--spaceIncrement));
---space-4xl: calc(var(--space-3xl) * var(--spaceIncrement));
-  `}
+          code={variables.space}
         />
         <Snippet
           preview={(
@@ -100,12 +70,7 @@ const Specs = ({
               >Text frame ratio</div>
             </>
           )}
-          code={
-`--textFrameRatio: ${textFrameRatio};
-
---textFrameY: ${textFrameY}em;
---textFrameX: calc(var(--textFrameY) * var(--textFrameRatio));
-  `}
+          code={variables.textFrame}
         />
         <div className="text-l">Color</div>
         <Snippet
@@ -123,18 +88,27 @@ const Specs = ({
               </div>
               <div className="mb-m"></div>
               <div className="colorsRow">
-                <div className="colorBox bgc-primary-2xlight"></div>
-                <div className="colorBox bgc-primary-xlight"></div>
-                <div className="colorBox bgc-primary-light"></div>
-                <div className="colorBox bgc-primary"></div>
-                <div className="colorBox bgc-primary-dark"></div>
-                <div className="colorBox bgc-primary-xdark"></div>
-                <div className="colorBox bgc-primary-2xdark"></div>
+                <div className="colorBox bgc-accent"></div>
               </div>
             </>
           )}
-          code={
-``}
+          code={variables.color}
+        />
+        <div className="text-l">Layer</div>
+        <Snippet
+          preview={(
+            <div style={{
+              width: '4rem',
+              height: '4rem',
+              border: 'var(--fieldBorderWidth) solid currentColor',
+              borderRadius: 'var(--radius)',
+            }} />              
+          )}
+          code={variables.layer}
+        />
+        <div className="text-l">Dark mode styles</div>
+        <Snippet
+          code={darkModeStyles}
         />
       </div>
     </div>
