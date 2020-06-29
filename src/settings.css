@@ -18,7 +18,7 @@ input[type=number] {
 .settingsGrid {
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr auto;
 }
 
 .settingsGridColumnDouble {
@@ -50,11 +50,43 @@ input[type=number] {
   font-size: 1rem;
 }
 
+.mainLogoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .mainLogo {
-  letter-spacing: 0.4em;
   font-size: 0.8rem;
-  margin-bottom: 0.5rem;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.mainLogo span {
+  margin-bottom: 0.7rem;
+}
+
+.infoIcon {
+  background-color: hsla(0, 0%, 100%, 0.2);
+  color: #1B1B1B;
+  color: white;
+  text-align: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  font-weight: bold;
+  /* font-family: georgia; */
+  font-family: monospace;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .aboutSection {
@@ -70,15 +102,16 @@ input[type=number] {
 
 .triggersColumn {
   border-left: 1px solid hsla(0, 0%, 100%, 0.1);
+  border-right: 1px solid hsla(0, 0%, 100%, 0.1);
   display: grid;
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
   justify-items: center;
   align-items: center;
 }
 
 @media (min-width: 1280px) {
   .triggersColumn {
-    width: 16rem;
+    width: 15rem;
   }
 }
 
@@ -98,7 +131,7 @@ input[type=number] {
 .xBorder {
   height: 1px;
   width: 100%;
-  background-color: hsla(0, 0%, 100%, 0.1);;
+  background-color: hsla(0, 0%, 100%, 0.1);
 }
 
 .settingLabel {
@@ -110,7 +143,7 @@ input[type=number] {
 }
 
 .settingWrapper {
-  margin: 1.1rem 0;
+  margin: 1.2rem 0 0 0;
 }
 
 .settingNumberInputWrapper {

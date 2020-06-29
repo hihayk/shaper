@@ -244,16 +244,6 @@ const Settings = ({
 
         </div>
         <div className="settingsGridColumn triggersColumn">
-          <div className="mainLogoSection">
-            <div className="mainLogo">
-              <span style={{opacity: 0.1}}>S</span>
-              <span style={{opacity: 0.3}}>S</span>
-              STRINGS
-              <span style={{opacity: 0.3}}>S</span>
-              <span style={{opacity: 0.1}}>S</span>
-            </div>
-          </div>
-          <div className="xBorder" style={{margin: '0.5rem 0'}} />
           <div className="randomButtonSection">
             <button
               className="triggerButton"
@@ -285,12 +275,23 @@ const Settings = ({
               </button>
             </div>
           </div>
+        </div>
 
-          <div className="xBorder" style={{margin: '0.5rem 0'}} />
-
-          <div className="aboutSection">
-            <a href="https://github.com/hihayk/strings" target="_blank" rel="noopener noreferrer">Github</a>
+        <div className="mainLogoSection">
+          <div className="mainLogo">
+            <span>S</span>
+            <span>H</span>
+            <span>A</span>
+            <span>P</span>
+            <span>E</span>
+            <span>R</span>
           </div>
+
+          {/* <div className="aboutSection">
+            <a href="https://github.com/hihayk/strings" target="_blank" rel="noopener noreferrer">Github</a>
+          </div> */}
+
+          <a className="infoIcon" href="https://github.com/hihayk/strings" target="_blank" rel="noopener noreferrer">i</a>
         </div>
       </div>
     </div>
