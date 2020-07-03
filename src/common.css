@@ -43,7 +43,7 @@ body {
   cursor: pointer;
   color: var(--c-body);
   letter-spacing: 0.03em;
-  transition: 0.2s;
+  transition: 0.2s filter;
 }
 
 .button:hover {

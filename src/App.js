@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './utilities.css';
 import './common.css';
 import Specs from './components/specs/specs';
@@ -7,7 +7,7 @@ import Settings from './components/settings'
 import DemoEmail from './components/demo-email/demo-email';
 import { getVariables, darkModeStyles } from './variables'
 
-const initialState = {
+const defaultState = {
   fontFamily: fonts[0],
   textSizeIncrement: 1.23,
   baseTextSize: 0.9,
@@ -27,6 +27,38 @@ const initialState = {
 }
 
 function App() {
+  
+  const getHash = () => {
+    const hash = decodeURI(window.location.hash)
+
+    if (hash) {
+
+      const stateKeysArray = Object.keys(defaultState)
+      const hashValuesArray = hash.substr(1, hash.length).split(['/'])
+      
+      const getHashObject = () => {
+        var hashObject = {}
+        stateKeysArray.forEach((key, i) => {
+          const valueWithBoolean = () => {
+            if(hashValuesArray[i] === 'true') { return true }
+            if(hashValuesArray[i] === 'false') { return false }
+            return hashValuesArray[i]
+          }
+
+          return hashObject[key] = valueWithBoolean()
+        })
+
+        return hashObject
+      }
+
+      return getHashObject()
+    }
+
+    return null
+  }
+
+  const initialState = getHash() || defaultState
+
   const [fontFamily, setFontFamily] = useState(initialState.fontFamily)
   const [textSizeIncrement, setTextSizeIncrement] = useState(initialState.textSizeIncrement)
   const [baseTextSize, setBaseTextSize] = useState(initialState.baseTextSize)
@@ -41,10 +73,11 @@ function App() {
   const [radius, setRadius] = useState(initialState.radius)
   const [fieldBorderWidth, setFieldBorderWidth] = useState(initialState.fieldBorderWidth)
   const [buttonRound, setButtonRound] = useState(initialState.buttonRound)
-  const [darkMode, setDarkMode] = useState(initialState.darkMode)
-  const [preview, setPreview] = useState(initialState.preview)
+  const [darkMode, setDarkMode] = useState(false)
+  const [preview, setPreview] = useState('demo')
 
-  const variables = getVariables({baseTextSize,
+  const variables = getVariables({
+    baseTextSize,
     textSizeIncrement,
     fontFamily,
     unit,
@@ -109,6 +142,38 @@ function App() {
     }
 
   }, [accentHue, accentLightness, accentSaturation, baseTextSize, buttonRound, darkMode, fieldBorderWidth, fontFamily, greySaturation, radius, spaceIncrement, textFrameRatio, textFrameY, textSizeIncrement, unit, variables.type])
+  
+  const currentState = {
+    fontFamily: fontFamily,
+    textSizeIncrement: textSizeIncrement,
+    baseTextSize: baseTextSize,
+    textFrameRatio: textFrameRatio,
+    textFrameY: textFrameY,
+    spaceIncrement: spaceIncrement,
+    unit: unit,
+    accentHue: accentHue,
+    accentSaturation: accentSaturation,
+    accentLightness: accentLightness,
+    greySaturation: greySaturation,
+    radius: radius,
+    fieldBorderWidth: fieldBorderWidth,
+    buttonRound: buttonRound,
+  }
+
+  // const isInitialMount = useRef(true);
+
+  if(getHash()) {
+    window.location.hash = encodeURI(Object.values(getHash()).join('/'))
+  }
+
+  const updateHash = () => {
+    window.location.hash = encodeURI(Object.values(currentState).join('/'))
+  }
+
+  useEffect(() => {
+    updateHash()
+    console.log(currentState.buttonRound)
+  });
 
   return (
     <div>
