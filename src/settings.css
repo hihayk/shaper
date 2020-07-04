@@ -114,7 +114,7 @@ input[type=number] {
   background-color: white;
   border: none;
   font: inherit;
-  color: #1B1B1B;
+  color: var(--settingsBg);
   padding: 0.8em 1em;
   cursor: pointer;
 }
@@ -169,12 +169,14 @@ input[type=range] {
 }
 
 .switchTrack {
-  background-color: hsla(0, 0%, 100%, 0.2);
   width: 2rem;
   height: 1rem;
   display: block;
   border-radius: 1rem;
   cursor: pointer;
+  box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, 0.5);;
+  transition: 0.2s;
+  overflow: hidden;
 }
 
 .switchTrack input {
@@ -187,16 +189,16 @@ input[type=range] {
   cursor: pointer;
   width: 1rem;
   height: 1rem;
-  transform: scale(0.8);
-  transform-origin: center;
   border-radius: 100%;
   display: block;
-  background-color: white;
-  transition: 0.15s;
+  box-shadow: inset 0 0 0 1px white, -1rem 0 0 10px white;
+  transition: 0.2s;
+  background-color: var(--settingsBg);
+  position: relative;
 }
 
 .switchTrack input:checked + .switchKnob {
-  transform: translate(1rem) scale(0.8);
+  transform: translate(1rem);
 }
 
 .settingButtonGroup {
@@ -219,6 +221,6 @@ input[type=range] {
 }
 
 .settingButton.active {
-  color: #1B1B1B;
+  color: var(--settingsBg);
   background-color: white;
 }

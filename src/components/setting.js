@@ -58,7 +58,7 @@ const Setting = ({
         </>
       )}
       {settingType === "switch" && (
-        <div className="switchSettingWrapper">
+        <div className={switchIsActive ? 'switchSettingWrapper active' : 'switchSettingWrapper'}>
           <label className="switchTrack">
             <input id={id} type="checkbox" checked={switchIsActive} onChange={onChange} />
             <div className="switchKnob"></div>

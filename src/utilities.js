@@ -18,10 +18,10 @@ export const getProperty = (property) => {
 export const fonts = [
   'system-ui',
   'IBM Plex Sans',
-  'futura, sans-serif',
+  'Futura',
   'Roboto Mono',
   'Nunito',
-  'helvetica, sans-serif',
+  'Helvetica',
   'Merriweather',
   'Work Sans',
 ]
