@@ -22,8 +22,6 @@ const defaultState = {
   radius: 0.4,
   fieldBorderWidth: 2,
   buttonRound: false,
-  darkMode: false,
-  preview: 'demo',
 }
 
 function App() {
@@ -32,7 +30,6 @@ function App() {
     const hash = decodeURI(window.location.hash)
 
     if (hash) {
-
       const stateKeysArray = Object.keys(defaultState)
       const hashValuesArray = hash.substr(1, hash.length).split(['/'])
       
@@ -144,35 +141,38 @@ function App() {
   }, [accentHue, accentLightness, accentSaturation, baseTextSize, buttonRound, darkMode, fieldBorderWidth, fontFamily, greySaturation, radius, spaceIncrement, textFrameRatio, textFrameY, textSizeIncrement, unit, variables.type])
   
   const currentState = {
-    fontFamily: fontFamily,
-    textSizeIncrement: textSizeIncrement,
-    baseTextSize: baseTextSize,
-    textFrameRatio: textFrameRatio,
-    textFrameY: textFrameY,
-    spaceIncrement: spaceIncrement,
-    unit: unit,
-    accentHue: accentHue,
-    accentSaturation: accentSaturation,
-    accentLightness: accentLightness,
-    greySaturation: greySaturation,
-    radius: radius,
-    fieldBorderWidth: fieldBorderWidth,
-    buttonRound: buttonRound,
+    fontFamily,
+    textSizeIncrement,
+    baseTextSize,
+    textFrameRatio,
+    textFrameY,
+    spaceIncrement,
+    unit,
+    accentHue,
+    accentSaturation,
+    accentLightness,
+    greySaturation,
+    radius,
+    fieldBorderWidth,
+    buttonRound,
   }
-
-  // const isInitialMount = useRef(true);
 
   if(getHash()) {
     window.location.hash = encodeURI(Object.values(getHash()).join('/'))
   }
-
+  
   const updateHash = () => {
     window.location.hash = encodeURI(Object.values(currentState).join('/'))
   }
+  
+  const isInitialMount = useRef(true);
 
   useEffect(() => {
-    updateHash()
-    console.log(currentState.buttonRound)
+    if (isInitialMount.current) {
+       isInitialMount.current = false;
+    } else {
+      updateHash()
+    }
   });
 
   return (
