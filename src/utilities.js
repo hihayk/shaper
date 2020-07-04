@@ -16,12 +16,12 @@ export const getProperty = (property) => {
 }
 
 export const fonts = [
-  'system-ui',
+  'system-ui, sans-serif',
   'IBM Plex Sans',
-  'Futura',
+  'Futura, sans-serif',
   'Roboto Mono',
   'Nunito',
-  'Helvetica',
+  'Helvetica, sans-serif',
   'Merriweather',
   'Work Sans',
 ]

@@ -1,13 +1,21 @@
 import React from 'react'
 import './demo-email.css'
 
+const contents = [
+  `Nylon is a chord generator that emulates chord strokes of a guitar. Play up to 6 strings per chord, add dynamics by controlling stroke speed, acceleration and velocity, and humanize each stroke by adding randomness.`,
+  `Alternative graphical interface for Robert Henke's ml.Distance but with a twist. Distance and panning values are interpolated, for avoiding clicks in the sound. The added smooth parameter controls the interpolation time.`,
+  `As suggested this version should keep correct timings when changing looping lengths.`,
+  `The Interpolation Time`,
+  `Added a preset system; now you can store/recall settings within a live set`,
+]
+
 const emails = [
-  { name: 'Brian Dog', handle: '@brian', content: 'This device includes 4 delays that can be patched together in the way that the user wishes, this allows greater control to generate loops and feedback.' },
-  { name: 'Brian Dog', handle: '@brian', content: 'This device includes 4 delays that can be patched together in the way that the user wishes, this allows greater control to generate loops and feedback.' },
-  { name: 'Brian Dog', handle: '@brian', content: 'This device includes 4 delays that can be patched together in the way that the user wishes, this allows greater control to generate loops and feedback.' },
+  { name: 'Koji Akane', handle: '@koji', content: contents[0] },
+  { name: 'Kiyoko Riku', handle: '@kiyoko', content: contents[1] },
+  { name: 'Ichirō Nori', handle: '@nori', content: contents[2] },
 ]
 const menuItems = [
-  'Menu item', 'Another', 'Third', 'More'
+  'First Section', 'Second Section', 'Third Section', 'Fourth Section'
 ]
 
 const DemoEmail = () => (
@@ -23,7 +31,7 @@ const DemoEmail = () => (
     </aside>
     <main>
       <div className="mb-l text-xl">
-        <strong>The Interpolation Time</strong>
+        <strong>{contents[3]}</strong>
       </div>
       <div className="tabs mb-l">
         <strong className="tab active">First</strong>
@@ -125,7 +133,7 @@ const DemoEmail = () => (
 
       <div className="detailsCard">
         <div className="text-s mb-m">{emails[2].name}</div>
-        <div className="text-m mb-m">This device includes 4 delays that can be patched together</div>
+        <div className="text-m mb-m">{contents[4]}</div>
         <div className="text-s mb-l c-bodyDimmed">{emails[2].content}</div>
         <div className="detailsActions">
           <button className="button button-accent">Save</button>
