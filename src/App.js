@@ -6,6 +6,7 @@ import { getRandomObject, setProperty, numberToUnit, fonts } from './utilities';
 import Settings from './components/settings'
 import DemoEmail from './components/demo-email/demo-email';
 import { getVariables, darkModeStyles } from './variables'
+import tinycolor from 'tinycolor2'
 
 const defaultState = {
   fontFamily: fonts[0],
@@ -105,6 +106,7 @@ function App() {
     setSpaceIncrement(getRandomObject().spaceIncrement)
     setAccentHue(getRandomObject().accentHue)
     setAccentSaturation(getRandomObject().accentSaturation)
+    setAccentLightness(getRandomObject().accentLightness)
     setGreySaturation(getRandomObject().greySaturation)
     setRadius(getRandomObject().radius)
     setFieldBorderWidth(getRandomObject().fieldBorderWidth)
@@ -137,7 +139,7 @@ function App() {
     } else {
       document.querySelector('body').classList.remove('darkMode');
     }
-
+    
   }, [accentHue, accentLightness, accentSaturation, baseTextSize, buttonRound, darkMode, fieldBorderWidth, fontFamily, greySaturation, radius, spaceIncrement, textFrameRatio, textFrameY, textSizeIncrement, unit, variables.type])
   
   const currentState = {

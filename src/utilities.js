@@ -40,6 +40,7 @@ export const getRandomObject = () => {
     spaceIncrement: randomNumber(1.5, 1.8),
     accentHue: randomNumber(0, 360, 'full'),
     accentSaturation: randomNumber(0, 100, 'full'),
+    accentLightness: randomNumber(30, 60, 'full'),
     greySaturation: randomNumber(0, 10, 'full'),
     radius: randomNumber(0, 0.4),
     fieldBorderWidth: randomNumber(1, 3, 'full'),

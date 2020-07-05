@@ -186,7 +186,7 @@ main {
   padding: var(--space-l);
   border-radius: var(--radius);
   align-items: center;
-  color: white;
+  color: var(--c-accentContrasted);
 }
 
 .highlightCardAvatar {

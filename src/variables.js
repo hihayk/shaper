@@ -1,3 +1,5 @@
+import tinycolor from 'tinycolor2'
+
 export const getVariables = ({
   baseTextSize,
   textSizeIncrement,
@@ -11,6 +13,13 @@ export const getVariables = ({
   accentLightness,
   greySaturation,
 }) => {
+  const getAccentButtonColor = () => {
+    const accentButtonBgLuminance = tinycolor(`hsl(${accentHue} ${accentSaturation} ${accentLightness})`).getLuminance()
+    const lightness = accentButtonBgLuminance < 0.3 ? 95 : 15
+
+    return `hsl(var(--accentH), var(--accentS), ${lightness}%)`
+  }
+
   return {
     type:
 `--baseTextSize: ${baseTextSize}rem;
@@ -50,6 +59,7 @@ export const getVariables = ({
 --accentS: ${accentSaturation}%;
 --accentL: ${accentLightness}%;
 --c-accent: hsl(var(--accentH), var(--accentS), var(--accentL));
+--c-accentContrasted: ${getAccentButtonColor()};
 
 --greyH: var(--accentH);
 --greyS: ${greySaturation}%;
@@ -74,13 +84,11 @@ export const getVariables = ({
 --c-grey7: hsl(var(--greyH), var(--greyS), var(--grey7L));
 --c-grey8: hsl(var(--greyH), var(--greyS), var(--grey8L));
 
---light: white;
---dark: var(--c-grey8);
 --c-border: hsla(var(--greyH), var(--greyS), var(--grey8L), 0.1);
 --c-overlay: var(--c-grey1);
 --c-xOverlay: var(--c-grey2);
---c-background: var(--light);
---c-body: var(--dark);
+--c-background: white;
+--c-body: var(--c-grey8);
 --c-bodyDimmed: hsla(var(--greyH), var(--greyS), var(--grey8L), 0.5);
 --c-fieldBorder: var(--c-grey2);
 --c-buttonBg: var(--c-grey2);`
@@ -95,11 +103,10 @@ export const getVariables = ({
 
 export const darkModeStyles =
 `body.darkMode {
-  --accent: var(--yellow);
   --c-border: hsla(var(--greyH), var(--greyS), var(--grey1L), 0.1);
   --c-overlay: var(--c-grey7);
   --c-xOverlay: var(--c-grey6);
-  --c-background: var(--dark);
+  --c-background: var(--c-grey8);
   --c-body: var(--c-grey1);
   --c-bodyDimmed: hsla(var(--greyH), var(--greyS), var(--grey1L), 0.5);
   --c-fieldBorder: var(--c-grey6);

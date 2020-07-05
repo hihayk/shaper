@@ -61,9 +61,13 @@
 }
 
 .colorsRow {
-  display: flex;
+  display: grid;
+  grid-gap: var(--space-s);
 }
 
-.colorsRow .colorBox + .colorBox {
-  margin-left: var(--space-s);
+.colorBoxWrapper {
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: var(--space-s);
+  align-items: center;
 }

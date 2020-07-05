@@ -56,7 +56,12 @@ body {
 
 .button-accent {
   background-color: var(--c-accent);
-  color: var(--light);
+  color: var(--c-accentContrasted);
+}
+
+.button-accent span {
+  color: black;
+  mix-blend-mode: exclusion;
 }
 
 .card {

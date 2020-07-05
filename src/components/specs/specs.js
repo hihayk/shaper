@@ -28,11 +28,12 @@ const Specs = ({
         <Snippet
           preview={(
             <>
-              <div className="text-xl">Aa 123 handgloves</div>
-              <div className="text-l">Aa 123 handgloves</div>
-              <div className="text-m">Aa 123 handgloves</div>
-              <div className="text-s">Aa 123 handgloves</div>
-              <div className="text-xs">Aa 123 handgloves</div>
+              {['xl','l','m','s','xs'].map((item, index) => (
+                <div key={index} className={`text-${item} mb-s`}>
+                  <div><strong>Aa123 — {item}</strong></div>
+                  <div>Handgloves</div>
+                </div>
+              ))}
             </>
           )}
           code={variables.type}
@@ -41,13 +42,9 @@ const Specs = ({
         <Snippet
           preview={(
             <>
-              <div className="demoSpace demoSpace-s"></div>
-              <div className="demoSpace demoSpace-m"></div>
-              <div className="demoSpace demoSpace-l"></div>
-              <div className="demoSpace demoSpace-xl"></div>
-              <div className="demoSpace demoSpace-2xl"></div>
-              <div className="demoSpace demoSpace-3xl"></div>
-              <div className="demoSpace demoSpace-4xl"></div>
+              {['s','m','l','xl','2xl','3xl','4xl'].map((item, index) => (
+                <div key={index} className={`demoSpace demoSpace-${item}`}></div>
+              ))}
             </>
           )}
           code={variables.space}
@@ -65,13 +62,13 @@ const Specs = ({
                   border: 'solid var(--c-overlay)',
                   borderWidth: 'var(--textFrameY)'
                 }}
-              >Text frame even</div>
+              >padding: var(--textFrameY)</div>
               <div
                 style={{
                   border: 'solid var(--c-overlay)',
                   borderWidth: 'var(--textFrameY) var(--textFrameX)'
                 }}
-              >Text frame ratio</div>
+              >padding: var(--textFrameY) var(--textFrameX)</div>
             </>
           )}
           code={variables.textFrame}
@@ -80,19 +77,22 @@ const Specs = ({
         <Snippet
           preview={(
             <>
-              <div className="colorsRow">
-                <div className="colorBox bgc-grey1"></div>
-                <div className="colorBox bgc-grey2"></div>
-                <div className="colorBox bgc-grey3"></div>
-                <div className="colorBox bgc-grey4"></div>
-                <div className="colorBox bgc-grey5"></div>
-                <div className="colorBox bgc-grey6"></div>
-                <div className="colorBox bgc-grey7"></div>
-                <div className="colorBox bgc-grey8"></div>
+              <div className="colorsRow">                
+                {[1,2,3,4,5,6,7,8].map((item, index) => (
+                  <div className="colorBoxWrapper">
+                    <div key={index} className={`colorBox bgc-grey${item}`}></div>
+                    <div className="colorBoxTitle">grey{item}</div>
+                  </div>
+                ))}
               </div>
-              <div className="mb-m"></div>
+              <div className="mb-l"></div>
               <div className="colorsRow">
-                <div className="colorBox bgc-accent"></div>
+                {['accent','accentContrasted'].map((item, index) => (
+                  <div className="colorBoxWrapper">
+                    <div key={index} className={`colorBox bgc-${item}`}></div>
+                    <div className="colorBoxTitle">{item}</div>
+                  </div>
+                ))}
               </div>
             </>
           )}

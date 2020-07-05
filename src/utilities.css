@@ -16,6 +16,7 @@
 .bgc-grey8 { background-color: var(--c-grey8) }
 
 .bgc-accent { background-color: var(--c-accent) }
+.bgc-accentContrasted { background-color: var(--c-accentContrasted) }
 
 .text-xs { font-size: var(--text-xs) }
 .text-s { font-size: var(--text-s) }
