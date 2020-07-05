@@ -7,20 +7,18 @@
   color: var(--c-body);
   font-family: var(--fontFamily);
   display: grid;
-  grid-template-columns: 1fr 3fr 1.9fr;
+  grid-template-columns: 17% 52% calc(100% - 17% - 52%);
   min-height: 100vh;
   background: var(--c-background);
 }
 
 .sidebar {
   border-right: 1px solid var(--c-border);
-  /* min-width: calc(30 * var(--unit)); */
   padding: var(--space-l);
 }
 
 .detailsPanel {
   border-left: 1px solid var(--c-border);
-  /* width: calc(60 * var(--unit)); */
   padding: var(--space-xl);
   background-color: var(--c-overlay);
 }

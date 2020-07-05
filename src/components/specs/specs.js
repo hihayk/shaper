@@ -79,8 +79,8 @@ const Specs = ({
             <>
               <div className="colorsRow">                
                 {[1,2,3,4,5,6,7,8].map((item, index) => (
-                  <div className="colorBoxWrapper">
-                    <div key={index} className={`colorBox bgc-grey${item}`}></div>
+                  <div key={index} className="colorBoxWrapper">
+                    <div className={`colorBox bgc-grey${item}`}></div>
                     <div className="colorBoxTitle">grey{item}</div>
                   </div>
                 ))}
@@ -88,7 +88,7 @@ const Specs = ({
               <div className="mb-l"></div>
               <div className="colorsRow">
                 {['accent','accentContrasted'].map((item, index) => (
-                  <div className="colorBoxWrapper">
+                  <div key={index} className="colorBoxWrapper">
                     <div key={index} className={`colorBox bgc-${item}`}></div>
                     <div className="colorBoxTitle">{item}</div>
                   </div>
