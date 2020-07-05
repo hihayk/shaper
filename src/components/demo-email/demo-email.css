@@ -164,11 +164,11 @@ main {
 }
 
 .chartCard .chart:first-child {
-  padding-right: var(--space-l);
+  padding-right: var(--space-m);
 }
 
 .chartCard .chart + .chart {
-  padding-left: var(--space-l);
+  padding-left: var(--space-m);
   border-left: 1px solid var(--c-border);
 }
 
@@ -240,4 +240,9 @@ main {
   .previewSection, .codeSection {
     width: 100%;
   }
+}
+
+.dataNumber {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

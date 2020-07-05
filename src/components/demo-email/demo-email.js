@@ -106,9 +106,9 @@ const DemoEmail = () => (
         <div className="chart">
           <div className="data pb-s">
             <div className="dataTitle">Data</div>
-            <div className="dataNumber text-xl pr-m">
+            <div className="dataNumber text-xl">
               <span className="c-bodyDimmed">$</span>
-              <strong>23.731</strong>
+              <strong>731</strong>
             </div>
           </div>
           <svg viewBox="0 0 172 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -118,9 +118,9 @@ const DemoEmail = () => (
         <div className="chart">
           <div className="data pb-s">
             <div className="dataTitle">Data</div>
-            <div className="dataNumber text-xl pr-m">
+            <div className="dataNumber text-xl">
               <span className="c-bodyDimmed">$</span>
-              <strong>7.120</strong>
+              <strong>8.260</strong>
             </div>
           </div>
           <svg viewBox="0 0 172 39" fill="none" xmlns="http://www.w3.org/2000/svg">
