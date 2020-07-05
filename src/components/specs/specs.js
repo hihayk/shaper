@@ -2,7 +2,7 @@ import React from 'react'
 import './specs.css';
 
 const Snippet = ({preview, code}) => (
-  <div className="snippetSection" style={{ gridTemplateColumns: preview ? '1fr 1fr' : '1fr' }}>
+  <div className={preview ? 'snippetSection withPreview' : 'snippetSection'}>
     {preview && (
       <div className="previewSection">
         {preview}
@@ -52,6 +52,10 @@ const Specs = ({
           )}
           code={variables.space}
         />
+        <div>
+          <div className="text-m">Text frame</div>
+          <div className="c-bodyDimmed">Use textFrame variables to set the padding of buttons and text inputs.</div>
+        </div>
         <Snippet
           preview={(
             <>

@@ -218,7 +218,7 @@ const Settings = ({
             value={radius}
             onChange={(e) => setRadius(e.target.value)}
             min={0}
-            max={0.5}
+            max={1}
             step={0.01}
             valueUnit="rem"
           />

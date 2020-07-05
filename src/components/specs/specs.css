@@ -12,6 +12,7 @@
 
 .snippetSection {
   display: flex;
+  margin-bottom: var(--space-xl);
 }
 
 .previewSection {
@@ -24,6 +25,10 @@
   background-color: var(--c-overlay);
   padding: var(--space-l);
   overflow: auto;
+  width: 100%;
+}
+
+.snippetSection.withPreview .codeSection {
   width: 50%;
 }
 
@@ -52,10 +57,13 @@
   height: 2rem;
   border-radius: 100%;
   display: block;
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
 }
 
 .colorsRow {
-  display: inline-grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: var(--space-s);
+  display: flex;
+}
+
+.colorsRow .colorBox + .colorBox {
+  margin-left: var(--space-s);
 }

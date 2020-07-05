@@ -54,7 +54,7 @@ export const getVariables = ({
 --greyH: var(--accentH);
 --greyS: ${greySaturation}%;
 --initialGreyLightness: 93%;
---greyscaleLightnessIncrement: 11%;
+--greyscaleLightnessIncrement: 11.3%;
 
 --grey1L:  var(--initialGreyLightness);
 --grey2L:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 1);
