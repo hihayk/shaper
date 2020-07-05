@@ -120,7 +120,7 @@ const DemoEmail = () => (
             <div className="dataTitle">Data</div>
             <div className="dataNumber text-xl">
               <span className="c-bodyDimmed">$</span>
-              <strong>8.260</strong>
+              <strong>294</strong>
             </div>
           </div>
           <svg viewBox="0 0 172 39" fill="none" xmlns="http://www.w3.org/2000/svg">
