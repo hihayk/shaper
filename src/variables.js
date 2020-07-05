@@ -85,8 +85,7 @@ export const getVariables = ({
 --c-grey8: hsl(var(--greyH), var(--greyS), var(--grey8L));
 
 --c-border: hsla(var(--greyH), var(--greyS), var(--grey8L), 0.1);
---c-overlay: var(--c-grey1);
---c-xOverlay: var(--c-grey2);
+--c-overlay: hsla(var(--greyH), var(--greyS), var(--grey8L), 0.07);
 --c-background: white;
 --c-body: var(--c-grey8);
 --c-bodyDimmed: hsla(var(--greyH), var(--greyS), var(--grey8L), 0.5);
@@ -104,8 +103,7 @@ export const getVariables = ({
 export const darkModeStyles =
 `body.darkMode {
   --c-border: hsla(var(--greyH), var(--greyS), var(--grey1L), 0.1);
-  --c-overlay: var(--c-grey7);
-  --c-xOverlay: var(--c-grey6);
+  --c-overlay: hsla(var(--greyH), var(--greyS), var(--grey1L), 0.07);
   --c-background: var(--c-grey8);
   --c-body: var(--c-grey1);
   --c-bodyDimmed: hsla(var(--greyH), var(--greyS), var(--grey1L), 0.5);

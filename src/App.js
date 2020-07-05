@@ -6,7 +6,6 @@ import { getRandomObject, setProperty, numberToUnit, fonts } from './utilities';
 import Settings from './components/settings'
 import DemoEmail from './components/demo-email/demo-email';
 import { getVariables, darkModeStyles } from './variables'
-import tinycolor from 'tinycolor2'
 
 const defaultState = {
   fontFamily: fonts[0],
