@@ -112,6 +112,8 @@ function App() {
     setButtonRound(getRandomObject().buttonRound)
   }
 
+  const bodyClassList = document.querySelector('body').classList
+
   useEffect(() => {
     setProperty('fontFamily', fontFamily)
     setProperty('textSizeIncrement', textSizeIncrement)
@@ -128,18 +130,18 @@ function App() {
     setProperty('fieldBorderWidth', numberToUnit(fieldBorderWidth, 'px'))
     
     if(buttonRound) {
-      document.querySelector('body').classList.add('roundButtons');
+      bodyClassList.add('roundButtons');
     } else {
-      document.querySelector('body').classList.remove('roundButtons');
+      bodyClassList.remove('roundButtons');
     }
     
     if(darkMode) {
-      document.querySelector('body').classList.add('darkMode');
+      bodyClassList.add('darkMode');
     } else {
-      document.querySelector('body').classList.remove('darkMode');
+      bodyClassList.remove('darkMode');
     }
     
-  }, [accentHue, accentLightness, accentSaturation, baseTextSize, buttonRound, darkMode, fieldBorderWidth, fontFamily, greySaturation, radius, spaceIncrement, textFrameRatio, textFrameY, textSizeIncrement, unit, variables.type])
+  }, [accentHue, accentLightness, accentSaturation, baseTextSize, bodyClassList, buttonRound, darkMode, fieldBorderWidth, fontFamily, greySaturation, radius, spaceIncrement, textFrameRatio, textFrameY, textSizeIncrement, unit, variables.type])
   
   const currentState = {
     fontFamily,
