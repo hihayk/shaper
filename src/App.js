@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import './utilities.css';
 import './common.css';
 import Specs from './components/specs/specs';
@@ -87,14 +87,23 @@ function App() {
     greySaturation,
   })
 
-  const style = document.createElement('style')
-  document.head.appendChild(style)
-  style.innerHTML = `
-    :root{
-      ${Object.values(variables).join('')}
+  const styleRef = useRef()
+
+  useLayoutEffect(() => {
+    // Only create style element once
+    if (!styleRef.current) {
+      const style = document.createElement('style')
+      document.head.appendChild(style)
+      styleRef.current = style;
     }
-    ${darkModeStyles}
-  `
+
+    styleRef.current.innerHTML = `
+      :root{
+        ${Object.values(variables).join('')}
+      }
+      ${darkModeStyles}
+    `
+  }, [variables])
 
   const handleRandomize = () => {
     setFontFamily(getRandomObject().fontFamily)
