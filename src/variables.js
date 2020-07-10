@@ -12,6 +12,8 @@ export const getVariables = ({
   accentSaturation,
   accentLightness,
   greySaturation,
+  radius,
+  fieldBorderWidth,
 }) => {
   const getAccentButtonColor = () => {
     const accentButtonBgLuminance = tinycolor(`hsl(${accentHue} ${accentSaturation} ${accentLightness})`).getLuminance()
@@ -52,7 +54,7 @@ export const getVariables = ({
     textFrame:
 `--textFrameRatio: ${textFrameRatio};
 --textFrameY: ${textFrameY};
---textFrameX: calc(var(--textFrameY) * var(--textFrameRatio));`    
+--textFrameX: calc(var(--textFrameY) * var(--textFrameRatio));`
     ,
     color:
 `--accentH: ${accentHue};
@@ -93,9 +95,9 @@ export const getVariables = ({
 --c-buttonBg: var(--c-grey2);`
     ,
     layer:
-`--radius: 0;
+`--radius: ${radius}rem;
 
---fieldBorderWidth: 2px;`
+--fieldBorderWidth: ${fieldBorderWidth}px;`
     ,
   }
 }

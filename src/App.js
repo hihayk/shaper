@@ -25,14 +25,14 @@ const defaultState = {
 }
 
 function App() {
-  
+
   const getHash = () => {
     const hash = decodeURI(window.location.hash)
 
     if (hash) {
       const stateKeysArray = Object.keys(defaultState)
       const hashValuesArray = hash.substr(1, hash.length).split(['/'])
-      
+
       const getHashObject = () => {
         var hashObject = {}
         stateKeysArray.forEach((key, i) => {
@@ -85,6 +85,8 @@ function App() {
     accentSaturation,
     accentLightness,
     greySaturation,
+    radius,
+    fieldBorderWidth,
   })
 
   const style = document.createElement('style')
@@ -128,21 +130,21 @@ function App() {
     setProperty('greyS', numberToUnit(greySaturation, '%'))
     setProperty('radius', numberToUnit(radius, 'rem'))
     setProperty('fieldBorderWidth', numberToUnit(fieldBorderWidth, 'px'))
-    
+
     if(buttonRound) {
       bodyClassList.add('roundButtons');
     } else {
       bodyClassList.remove('roundButtons');
     }
-    
+
     if(darkMode) {
       bodyClassList.add('darkMode');
     } else {
       bodyClassList.remove('darkMode');
     }
-    
+
   }, [accentHue, accentLightness, accentSaturation, baseTextSize, bodyClassList, buttonRound, darkMode, fieldBorderWidth, fontFamily, greySaturation, radius, spaceIncrement, textFrameRatio, textFrameY, textSizeIncrement, unit, variables.type])
-  
+
   const currentState = {
     fontFamily,
     textSizeIncrement,
@@ -163,11 +165,11 @@ function App() {
   if(getHash()) {
     window.location.hash = encodeURI(Object.values(getHash()).join('/'))
   }
-  
+
   const updateHash = () => {
     window.location.hash = encodeURI(Object.values(currentState).join('/'))
   }
-  
+
   const isInitialMount = useRef(true);
 
   useEffect(() => {
