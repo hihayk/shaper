@@ -53,7 +53,7 @@ export const getVariables = ({
     ,
     textFrame:
 `--textFrameRatio: ${textFrameRatio};
---textFrameY: ${textFrameY};
+--textFrameY: ${textFrameY}em;
 --textFrameX: calc(var(--textFrameY) * var(--textFrameRatio));`
     ,
     color:
