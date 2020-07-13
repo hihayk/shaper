@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/shaper/static/css/main.8ca69402.chunk.css",
-    "main.js": "/shaper/static/js/main.008459e2.chunk.js",
-    "main.js.map": "/shaper/static/js/main.008459e2.chunk.js.map",
+    "main.js": "/shaper/static/js/main.ded0afd7.chunk.js",
+    "main.js.map": "/shaper/static/js/main.ded0afd7.chunk.js.map",
     "runtime-main.js": "/shaper/static/js/runtime-main.57ea6f0c.js",
     "runtime-main.js.map": "/shaper/static/js/runtime-main.57ea6f0c.js.map",
     "static/js/2.261313dc.chunk.js": "/shaper/static/js/2.261313dc.chunk.js",
     "static/js/2.261313dc.chunk.js.map": "/shaper/static/js/2.261313dc.chunk.js.map",
     "index.html": "/shaper/index.html",
-    "precache-manifest.0c14a4a49701453246a9f62ed45be4c8.js": "/shaper/precache-manifest.0c14a4a49701453246a9f62ed45be4c8.js",
+    "precache-manifest.c82487b7fdcef9a58304b175c4878d3e.js": "/shaper/precache-manifest.c82487b7fdcef9a58304b175c4878d3e.js",
     "service-worker.js": "/shaper/service-worker.js",
     "static/css/main.8ca69402.chunk.css.map": "/shaper/static/css/main.8ca69402.chunk.css.map",
     "static/js/2.261313dc.chunk.js.LICENSE.txt": "/shaper/static/js/2.261313dc.chunk.js.LICENSE.txt",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.57ea6f0c.js",
     "static/js/2.261313dc.chunk.js",
     "static/css/main.8ca69402.chunk.css",
-    "static/js/main.008459e2.chunk.js"
+    "static/js/main.ded0afd7.chunk.js"
   ]
 }
